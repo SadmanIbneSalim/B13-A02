@@ -1,0 +1,63 @@
+/* universal */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.font-inter{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  color: white;
+}
+body{
+    background-color: #1A0B2E;
+}
+/* span{
+    color: linear gradient;
+    
+
+} */
+
+
+
+
+
+  /* Shared-styles */
+
+  .font-container-title{
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .btn{
+    background-color: ;
+    padding: 12.5px 16px;
+    border-radius: 1000px;
+    border: none;
+    background:linear-gradient(to right top,rgb(229, 185, 104),rgb(189, 35, 61),rgb(236, 0, 236));
+    color: white;
+    font-weight: 600;
+}
+  
+
+
+
+
+
+  /* Adding navbar styling */
+
+  .nav-container{
+    display: flex;
+    max-width: 1200px;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .nav-title{
+    font-size: 3rem;
+  }
+
+  .nav-option{
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    
+  }
