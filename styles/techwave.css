@@ -257,3 +257,26 @@ body{
     border-radius: 50%;
     padding:10px;   
 }
+
+/* adding style for the footer */
+
+.footer-container{
+   padding: 120px 0;
+    background-image: url("../assets/footer-bg.png");
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center; 
+    max-width: 1600px;
+    /* border: 1px solid white; */
+}
+
+.footer-container h1{
+    font-size: 5rem;
+}
+.footer-platform{
+    display: flex;
+   justify-content: center;
+   gap: 40px;
+   margin: 32px 0;
+}
