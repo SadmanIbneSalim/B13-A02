@@ -216,3 +216,44 @@ body{
     color: #00FF88;
 }
   
+/* host style adding */
+
+
+.host-container{
+    margin: 120px auto;  
+}
+.host-container h2{
+    text-align: center;  
+    margin-bottom: 40px;
+}
+
+.host-content-container{
+    display: flex;
+    background-color:#351165 ;
+    padding: 40px;
+    border-radius: 40px;
+    align-items: center;
+    gap: 24px;
+}
+
+.host-content h3{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.host-socials{
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+#linkedin ,
+#x,
+#instagram,
+#youtube{
+    width:40px;
+    height: 40px;
+    border: 2px solid #533C72;
+    border-radius: 50%;
+    padding:10px;   
+}
