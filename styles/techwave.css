@@ -60,7 +60,21 @@ span{
 br{
     display: inline;
 }
-  
+
+   @keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0,255,136,0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 20px rgba(0,255,136,0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0,255,136,0);
+  }
+}
 
 
 
@@ -166,25 +180,6 @@ br{
     font-weight: 600;
   }
 
-  
-  
- @keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(0,255,136,0.7);
-  }
-  70% {
-    transform: scale(1.1);
-    box-shadow: 0 0 0 20px rgba(0,255,136,0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(0,255,136,0);
-  }
-}
-    
-  
-
   #new{
     background-color:#00FF88;
     color: black;
@@ -222,6 +217,26 @@ br{
   .about-rating-container h2{
     color: #00FF88;
   }
+  .rating-150k{
+    animation: popIn 0.5s ease-out; animation: popIn 0.5s ease-out;
+     animation-delay: 0s;
+    
+  }
+  .rating-200{
+    animation: popIn 0.5s ease-out; animation: popIn 0.5s ease-out;
+    animation-delay: .3s;
+
+  }
+  .rationg-4point9{
+    animation: popIn 0.5s ease-out; animation: popIn 0.5s ease-out;
+     animation-delay: .6s;
+
+  }
+  .rating-50{
+    animation: popIn 0.5s ease-out; animation: popIn 0.5s ease-out;
+     animation-delay: .9s;
+
+  }
 
   /* adding style for why choose techwave */
   .choose-container{
@@ -232,6 +247,7 @@ br{
     text-align: center;
     margin-bottom: 40px;
   }
+ 
   .choose-container-grid{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -488,9 +504,4 @@ br{
 .footer-container h1{
     font-size: 3rem;
 }
-
-
-
-
-
 }
