@@ -9,11 +9,7 @@
 body{
     background-color: #1A0B2E;
 }
-/* span{
-    color: linear gradient;
-    
 
-} */
  *{
     margin: 0;
     padding: 0;
@@ -22,9 +18,10 @@ body{
 
 
 
-
-
   /* Shared-styles */
+   .branding{
+    font-size: 3rem;
+  }
 
   .font-container-title{
     font-size: 3rem;
@@ -49,6 +46,14 @@ body{
 .width{
     max-width: 1200px;
 }
+span{
+    background:linear-gradient(to right top,rgb(229, 185, 104),rgb(189, 35, 61),rgb(236, 0, 236));
+    color: transparent;
+    -webkit-background-clip: text;
+}
+br{
+    display: inline;
+}
   
 
 
@@ -65,16 +70,16 @@ body{
     /* border: 2px solid red; */
   }
 
-  .nav-title{
-    font-size: 3rem;
-  }
-
   .nav-option{
     display: flex;
     list-style: none;
     gap: 32px;
     
   }
+  #hamburger{
+    display: none;
+  }
+
 
   /* adding styles for bannar */
 
@@ -93,12 +98,16 @@ body{
     /* border: 1px solid wheat; */
   }
     .bannar-image{
-    background-image: url(../assets/hero-circle.png);
-    background-size: cover;
-    max-width: 350px;
-    height: 350px;
-    padding-top: 69px;
-  }
+  position: relative;      
+  background-image: url(../assets/hero-circle.png);
+  width: 350px;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  display: flex;         
+  align-items: center;
+  justify-content: center;
+}
    .bannar-container h2{
     margin-top: 40px;  
   }
@@ -108,6 +117,7 @@ body{
   }
   .button-container{
     margin-top: 24px;
+    /* border: 1px solid white; */
   }
   
     .btn-transparent{
@@ -119,6 +129,20 @@ body{
     font-weight: 600;
   }
 
+  #new{
+    background-color:#00FF88;
+    color: black;
+    font-size: 1.125rem;
+    font-weight: 600;
+    max-width: 75px;
+    padding: 8px 18px;
+    border-radius: 1000px;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    box-shadow: 0 3px 27px #00ff8884;
+  }
+
   /* adding styles for about part */
 
   .about-container{
@@ -128,9 +152,10 @@ body{
   .about h2{
     margin-bottom: 16px;
   }
-  .about p{
-    margin-bottom: 80px;
+  .font-container-p{
+    margin: 20px 0 60px 0;
   }
+  
 
   .about-rating-container{
     display: flex;
@@ -279,4 +304,132 @@ body{
    justify-content: center;
    gap: 40px;
    margin: 32px 0;
+}
+
+/* making site responsive for smaller display */
+@media screen and (max-width: 576px) {
+
+    /* shared style */
+    br{
+    display: none;
+  }
+  .font-container-title{
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  branding{
+    font-size: 2.5rem;
+
+  }
+
+
+    /* navbar styling */
+    .nav-option,.nav-container button{
+        display: none;
+    }
+    #hamburger{
+    display: inline;
+  }
+  .nav-container{
+    margin: 20px ;
+  }
+   .bannar-container {
+  padding: 40px 0;
+  background-image: url(../assets/hero-bg.png);
+  max-width: 576px;
+}
+  .bannar-content{
+    max-width: 400px;
+    margin-top: 40px;
+
+    /* border: 1px solid rgb(192, 192, 192); */
+  }
+    .bannar-image{
+    max-width: 200px;
+    max-height: 200px; 
+  }
+  .bannar-image img{
+    max-width: 80px;
+  }
+
+  #new{
+    right:-5%
+  }
+
+ /* adding styles for about part */
+  .about-container{
+    padding: 20px;
+    text-align: center;
+  }
+ 
+  .about p{
+    margin-bottom: 30px;
+  }
+
+  .about-rating-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 40px 0;
+  }
+
+   /* adding style for why choose techwave */
+  .choose-container{
+    padding: 40px 20px;
+  }
+
+  .choose-container-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* adding featured episodes */
+.episode-container{
+    margin: 40px 20px;
+}
+.episode-container h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.episode{
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* host style adding */
+.host-container{
+    margin: 60px 20px;  
+}
+
+.host-content-container{
+    flex-direction: column;
+    text-align: center;  
+}
+
+.host-socials{
+    justify-content: center;
+}
+
+/* adding style for the footer */
+.footer-container{
+   padding: 40px 0;
+    background-image: url("../assets/footer-bg.png");
+    background-size: cover;
+    /* /* background-position: center; */
+    background-repeat: no-repeat;
+    text-align: center;  */
+}
+
+.footer-platform{
+    max-width: 255px;
+    margin: 24px auto;
+    flex-wrap: wrap;
+   gap: 5px;  
+}
+
+
+
+
+
 }
