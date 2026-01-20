@@ -32,13 +32,19 @@ body{
     font-weight: 700;
   }
 
-  .btn{
+  .btn-uni{
     padding: 12.5px 16px;
     border-radius: 1000px;
     border: none;
     background:linear-gradient(to right top,rgb(229, 185, 104),rgb(189, 35, 61),rgb(236, 0, 236));
     color: white;
     font-weight: 600;
+    transition: transform .5s ;
+}
+.btn:hover{
+    box-shadow: 0px 3px 27px  rgb(166, 54, 144);
+    cursor: pointer;
+    transform: scale(1.1)
 }
 .margin{
     margin: 0 auto;
@@ -80,8 +86,23 @@ br{
     display: none;
   }
 
+@keyframes wobble {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  50% { transform: rotate(-3deg); }
+  75% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+  .btn {
+    animation: wobble 1s infinite;
+   
+}
+
 
   /* adding styles for bannar */
+
 
  .bannar-container {
   padding: 101px 0;
@@ -97,6 +118,20 @@ br{
     max-width: 550px;
     /* border: 1px solid wheat; */
   }
+
+  @keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
     .bannar-image{
   position: relative;      
   background-image: url(../assets/hero-circle.png);
@@ -107,6 +142,8 @@ br{
   display: flex;         
   align-items: center;
   justify-content: center;
+  animation: popIn 0.5s ease-out; animation: popIn 0.5s ease-out;
+
 }
    .bannar-container h2{
     margin-top: 40px;  
@@ -129,6 +166,25 @@ br{
     font-weight: 600;
   }
 
+  
+  
+ @keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0,255,136,0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 20px rgba(0,255,136,0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0,255,136,0);
+  }
+}
+    
+  
+
   #new{
     background-color:#00FF88;
     color: black;
@@ -141,6 +197,7 @@ br{
     top: 10%;
     right: 5%;
     box-shadow: 0 3px 27px #00ff8884;
+    animation: pulse 2s infinite;
   }
 
   /* adding styles for about part */
@@ -335,8 +392,9 @@ br{
   }
    .bannar-container {
   padding: 40px 0;
-  background-image: url(../assets/hero-bg.png);
+  background-image: url(../assets/responsive-bannar-bg.png);
   max-width: 576px;
+  padding-top: 7px;
 }
   .bannar-content{
     max-width: 400px;
@@ -414,7 +472,7 @@ br{
 /* adding style for the footer */
 .footer-container{
    padding: 40px 0;
-    background-image: url("../assets/footer-bg.png");
+    background-image: url("../assets/responsive-footer-bg.png");
     background-size: cover;
     /* /* background-position: center; */
     background-repeat: no-repeat;
@@ -423,9 +481,12 @@ br{
 
 .footer-platform{
     max-width: 255px;
-    margin: 24px auto;
+    margin: 10px auto;
     flex-wrap: wrap;
    gap: 5px;  
+}
+.footer-container h1{
+    font-size: 3rem;
 }
 
 
